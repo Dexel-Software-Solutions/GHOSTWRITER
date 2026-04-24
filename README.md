@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Title -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=42&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=800&height=80&lines=👻+GHOSTWRITER" alt="GHOSTWRITER" />
+<h2> GHOSTWRITER >_ <h2>
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=2500&pause=800&color=3FB950&center=true&vCenter=true&width=800&lines=Behavioral+Attacker+Intelligence+Framework;Same+attacker.+Different+IP.+Still+caught.;IP+rotated%3F+Doesn't+matter.;VPN+switched%3F+We+see+through+it.;Tor+exit+changed%3F+The+ghost+has+a+face." alt="Tagline" />
 
