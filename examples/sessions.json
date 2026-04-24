@@ -1,0 +1,192 @@
+[
+  {
+    "id": "sess-sqlmap-tor-001",
+    "start_time": "2024-01-15T10:00:00Z",
+    "end_time":   "2024-01-15T10:00:06Z",
+    "source_ip":  "185.220.101.45",
+    "source_port": 54321,
+    "protocol":   "HTTP/1.1",
+    "requests": [
+      {
+        "timestamp":     "2024-01-15T10:00:00Z",
+        "method":        "GET",
+        "path":          "/login.php",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    8192,
+        "latency":       45.2
+      },
+      {
+        "timestamp":     "2024-01-15T10:00:00.500Z",
+        "method":        "GET",
+        "path":          "/login.php?id=1'",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 500,
+        "bytes_sent":    512,
+        "bytes_recv":    256,
+        "latency":       120.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:00:01Z",
+        "method":        "GET",
+        "path":          "/login.php?id=1 OR 1=1--",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    8192,
+        "latency":       98.5
+      },
+      {
+        "timestamp":     "2024-01-15T10:00:02Z",
+        "method":        "GET",
+        "path":          "/admin.php",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 403,
+        "bytes_sent":    512,
+        "bytes_recv":    1024,
+        "latency":       35.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:00:03Z",
+        "method":        "GET",
+        "path":          "/wp-admin/",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 404,
+        "bytes_sent":    512,
+        "bytes_recv":    512,
+        "latency":       22.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:00:04Z",
+        "method":        "GET",
+        "path":          "/admin/login?user=admin'--",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    4096,
+        "latency":       88.0
+      }
+    ]
+  },
+  {
+    "id": "sess-sqlmap-vpn-001",
+    "start_time": "2024-01-15T10:05:00Z",
+    "end_time":   "2024-01-15T10:05:04Z",
+    "source_ip":  "91.108.4.12",
+    "source_port": 61234,
+    "protocol":   "HTTP/1.1",
+    "requests": [
+      {
+        "timestamp":     "2024-01-15T10:05:00Z",
+        "method":        "GET",
+        "path":          "/register.php?id=1'",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 500,
+        "bytes_sent":    512,
+        "bytes_recv":    256,
+        "latency":       110.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:05:01Z",
+        "method":        "GET",
+        "path":          "/search.php?q=UNION+SELECT+1,2,3--",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    2048,
+        "latency":       75.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:05:02Z",
+        "method":        "GET",
+        "path":          "/api/users?id=1+AND+SLEEP(5)",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    1024,
+        "latency":       5080.0
+      },
+      {
+        "timestamp":     "2024-01-15T10:05:03Z",
+        "method":        "GET",
+        "path":          "/api/auth?token='+OR+'1'='1",
+        "headers":       { "User-Agent": "sqlmap/1.7.8", "Accept": "text/html,application/xhtml+xml", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.5", "Connection": "keep-alive" },
+        "response_code": 200,
+        "bytes_sent":    512,
+        "bytes_recv":    4096,
+        "latency":       88.0
+      }
+    ]
+  },
+  {
+    "id": "sess-nikto-001",
+    "start_time": "2024-01-15T11:00:00Z",
+    "end_time":   "2024-01-15T11:00:06Z",
+    "source_ip":  "203.0.113.77",
+    "source_port": 49001,
+    "protocol":   "HTTP/1.1",
+    "requests": [
+      {
+        "timestamp":     "2024-01-15T11:00:00Z",
+        "method":        "GET",
+        "path":          "/.git/config",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 404,
+        "bytes_sent":    256,
+        "bytes_recv":    128,
+        "latency":       18.0
+      },
+      {
+        "timestamp":     "2024-01-15T11:00:01Z",
+        "method":        "GET",
+        "path":          "/.env",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 200,
+        "bytes_sent":    256,
+        "bytes_recv":    2048,
+        "latency":       22.0
+      },
+      {
+        "timestamp":     "2024-01-15T11:00:02Z",
+        "method":        "GET",
+        "path":          "/wp-config.php",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 200,
+        "bytes_sent":    256,
+        "bytes_recv":    4096,
+        "latency":       25.0
+      },
+      {
+        "timestamp":     "2024-01-15T11:00:03Z",
+        "method":        "GET",
+        "path":          "/phpinfo.php",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 200,
+        "bytes_sent":    256,
+        "bytes_recv":    65536,
+        "latency":       45.0
+      },
+      {
+        "timestamp":     "2024-01-15T11:00:04Z",
+        "method":        "GET",
+        "path":          "/.htaccess",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 403,
+        "bytes_sent":    256,
+        "bytes_recv":    512,
+        "latency":       15.0
+      },
+      {
+        "timestamp":     "2024-01-15T11:00:05Z",
+        "method":        "GET",
+        "path":          "/backup.zip",
+        "headers":       { "User-Agent": "Nikto/2.1.6", "Accept": "*/*", "Accept-Encoding": "identity", "Accept-Language": "en", "Connection": "close" },
+        "response_code": 200,
+        "bytes_sent":    256,
+        "bytes_recv":    1048576,
+        "latency":       380.0
+      }
+    ]
+  }
+]

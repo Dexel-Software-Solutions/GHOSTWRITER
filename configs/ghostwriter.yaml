@@ -1,0 +1,40 @@
+# GHOSTWRITER Configuration
+# Engineer: Demiyan Dissanayake | Dexel Software Solutions
+# https://github.com/Dexel-Software-Solutions
+
+# Database path
+db: ghostwriter.db
+
+# Output directory for reports
+output: ./reports
+
+# Fingerprinting engine settings
+fingerprint:
+  min_request_threshold: 3
+  correlation_threshold: 0.72
+  enable_tls_fingerprint: true
+  enable_tcp_fingerprint: true
+  profile_ttl: 720h  # 30 days
+
+  # Signal weights (must sum to ~1.0)
+  weights:
+    tls_fingerprint: 0.30
+    tcp_stack: 0.20
+    http_headers: 0.20
+    timing_pattern: 0.10
+    scan_pattern: 0.10
+    tool_signature: 0.05
+    payload_signature: 0.05
+
+# Correlation engine settings
+correlation:
+  min_similarity: 0.60
+  temporal_window: 168h  # 7 days
+  multi_signal: true
+  max_results: 10000
+
+# Alert thresholds
+alerts:
+  threat_score_medium: 40
+  threat_score_high: 60
+  threat_score_critical: 80
